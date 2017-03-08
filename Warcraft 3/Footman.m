@@ -8,11 +8,29 @@
 
 #import "Footman.h"
 
+
+
 @implementation Footman
 
 -(instancetype)init{
-    _healthPoints = 60;
+    
+    self = [super initWithHP: 60 AP: 10];
+//    self.healthPoints = 60;
+//    self.attackPower = 10;
     return self;
+}
+
+
+- (void)damage:(int)damage {
+    
+    self.healthPoints -= 4;
+}
+
+
+
+- (void)attack:(Unit *)enemy withDamage:(int)damage {
+    
+    enemy.healthPoints -= 10;
 }
 
 @end
