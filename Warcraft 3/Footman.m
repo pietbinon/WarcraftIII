@@ -23,14 +23,14 @@
 
 - (void)damage:(int)damage {
     
-    self.healthPoints -= 4;
+    self.healthPoints -= damage;
 }
 
 
 
 - (void)attack:(Unit *)enemy withDamage:(int)damage {
     
-    enemy.healthPoints -= 10;
+    enemy.healthPoints -= damage;
 }
 
 @end
